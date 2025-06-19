@@ -418,11 +418,24 @@
         </header>
 
         <div class="letter-container">
-            <div class="letter" id="typed-text" contenteditable="true"></div>
+            <div class="letter" id="typed-text" contenteditable="true" spellcheck="true">
+                My dearest friend,<br><br>
+                On your special day, I want you to know how grateful I am to have you in my life. 
+                You make every day brighter just by being you - kind, funny, and incredibly thoughtful.
+                I reallly like ur company aur ya sach hai becz i am honest about my compliments
+                and u better know this already...🙂🙂🤗🤗🤗 
+                Tumhe pta mera passs bat ni hoti krna ko koi but still mera dill krta bat krna paaa...
+                even ik ka maybe tum disturb hoti ho..😁😁🤧 
+                Happy Birthday 💃💃💃😘😘🎉🔐to my favorite person in the world! 😘😘🤗🤗🤗
+                Here's to many more years of friendship, laughter, and creating memories together (INSHALLAH).
+                 Alllah tumhe mazeeed himmmat da muja bardast krna ki ameeeennnn😁😁😁😁 💃💃💃💃💃💃💃💃
+                 Bs un baqi chat pa karo gi wish laptop cha ni likh onda aurrrr 🤧🤧🤧🤧 
+                 Loveee uuuuu mera bacha💘💘💕💋.
+,<br>
+                [Aisha]
+            </div>
         </div>
-<div class="letter" id="typed-text" contenteditable="true" spellcheck="true">
-</div>
-    </div>
+
         <div class="video-container" id="video-message">
             <!-- Replace with your video embed code -->
             <iframe src="about:blank" frameborder="0" allowfullscreen></iframe>
@@ -544,21 +557,6 @@
             const savedLetter = localStorage.getItem('editableLetter');
             const savedTitle = localStorage.getItem('editableLetterTitle');
             if (savedLetter) {
-                document.getElementById('typed-text').innerText = savedLetter;
-            } else {
-                // Typewriter effect for letter (only if not saved)
-                const letterContent = "My dearest friend,\n\nAs I sit here thinking about all our memories together, I can't help but smile. From our late-night talks to our spontaneous adventures, you've filled my life with so much joy and laughter. You've been my shoulder to cry on, my partner in crime, and my biggest supporter.\n\nOn your special day, I want you to know how grateful I am to have you in my life. You make every day brighter just by being you - kind, funny, and incredibly thoughtful.\n\nHappy Birthday to my favorite person in the world! Here's to many more years of friendship, laughter, and creating memories together.\n\nWith all my love,\n[Your Name]";
-                new Typed('#typed-text', {
-                    strings: [letterContent],
-                    typeSpeed: 30,
-                    showCursor: true,
-                    cursorChar: '|',
-                    onComplete: function() {
-                        setTimeout(() => {
-                            document.querySelector('.surprise-button').classList.add('animate__animated', 'animate__pulse', 'animate__infinite');
-                        }, 1000);
-                    }
-                });
                 document.getElementById('typed-text').innerHTML = savedLetter;
             }
             if (savedTitle) {
@@ -567,7 +565,6 @@
 
             // Save on blur (when user clicks away)
             document.getElementById('typed-text').addEventListener('blur', function() {
-                localStorage.setItem('editableLetter', this.innerText);
                 localStorage.setItem('editableLetter', this.innerHTML);
             });
             document.querySelector('header h1').addEventListener('blur', function() {
