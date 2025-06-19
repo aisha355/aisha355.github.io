@@ -420,7 +420,21 @@
         <div class="letter-container">
             <div class="letter" id="typed-text" contenteditable="true"></div>
         </div>
-
+<div class="letter" id="typed-text" contenteditable="true" spellcheck="true">
+                Mera Panda,  my biggest supporter.🥰🥰😘😘,<br><br>
+      On your special day, I want you to know how grateful I am to have you in my life.
+      You make every day brighter just by being you - kind, funny, and incredibly thoughtful.
+    I reallly like ur company aur ya sach hai becz i am honest about my compliments and u better know this already...🙂🙂🤗🤗🤗
+    Tumhe pta mera passs bat ni hoti krna ko koi but still mera dill krta bat krna paaa... even ik ka maybe tum disturb hoti ho..😁😁🤧
+    Happy Birthday 💃💃💃😘😘🎉🔐to my favorite person in the world! 😘😘🤗🤗🤗
+    Here's to many more years of friendship, laughter, and creating memories together (INSHALLAH).
+    Alllah tumhe mazeeed himmmat da muja bardast krna ki ameeeennnn😁😁😁😁 💃💃💃💃💃💃💃💃
+    Bs un baqi chat pa karo gi wish laptop cha ni likh onda aurrrr 🤧🤧🤧🤧
+    Loveee uuuuu mera bacha💘💘💕💋.
+<br><br>
+                [AISHA]=Naegleria fowleri
+</div>
+    </div>
         <div class="video-container" id="video-message">
             <!-- Replace with your video embed code -->
             <iframe src="about:blank" frameborder="0" allowfullscreen></iframe>
@@ -557,6 +571,7 @@
                         }, 1000);
                     }
                 });
+                document.getElementById('typed-text').innerHTML = savedLetter;
             }
             if (savedTitle) {
                 document.querySelector('header h1').innerText = savedTitle;
@@ -565,6 +580,7 @@
             // Save on blur (when user clicks away)
             document.getElementById('typed-text').addEventListener('blur', function() {
                 localStorage.setItem('editableLetter', this.innerText);
+                localStorage.setItem('editableLetter', this.innerHTML);
             });
             document.querySelector('header h1').addEventListener('blur', function() {
                 localStorage.setItem('editableLetterTitle', this.innerText);
